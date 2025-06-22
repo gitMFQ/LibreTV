@@ -6,8 +6,8 @@
  */
 function isPasswordProtected() {
     // 检查页面上嵌入的环境变量
-    const pwd = '565888' //window.__ENV__ && window.__ENV__.PASSWORD;
-    const adminPwd = '652299482' //window.__ENV__ && window.__ENV__.ADMINPASSWORD;
+    const pwd = window.__ENV__ && window.__ENV__.PASSWORD;
+    const adminPwd = window.__ENV__ && window.__ENV__.ADMINPASSWORD;
 
     // 检查普通密码或管理员密码是否有效
     const isPwdValid = typeof pwd === 'string' /*&& pwd.length === 64 */&& !/^0+$/.test(pwd);
